@@ -1,0 +1,55 @@
+$backColour: #042140;
+$sectColour: #f4f5f6;
+$themeColour1: #f208ab;
+$themeColour2: #1278e4;
+
+section {
+	background-color: $sectColour;
+	margin-bottom: 32px;
+	border-radius: 5px;
+}
+
+section.container {
+	padding: 50px 30px;
+	@media (max-width: 575.98px) {
+		padding: 15px;
+	}
+}
+body {
+	background-color: $backColour;
+	font-family: "Montserrat", sans-serif;
+}
+body,
+a,
+.btn,
+button,
+a:hover {
+	color: $backColour;
+	text-decoration: none;
+}
+
+.mainTitles {
+	background-color: $themeColour2;
+	text-align: center;
+	border-radius: 5px;
+	padding: 0.25rem 0;
+}
+
+.row {
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.card {
+	height: 100%;
+	border: 5px #042140 solid;
+	border-radius: 20px;
+	margin-top: 10px;
+}
+.card:hover {
+	border-color: $themeColour1;
+	.card-header {
+		background-color: $themeColour1;
+	}
+}
