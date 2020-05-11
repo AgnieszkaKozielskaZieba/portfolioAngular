@@ -1,27 +1,19 @@
-import {
-	Component,
-	OnInit,
-	ViewChild,
-	ElementRef,
-	AfterViewInit,
-} from "@angular/core";
-import { ExpandingCardComponent } from "../shared/expanding-card.component";
-
+import { Component, OnInit, AfterViewChecked, ViewChild } from "@angular/core";
+import { NgxMasonryComponent } from "ngx-masonry";
 @Component({
 	selector: "app-about",
 	templateUrl: "./about.component.html",
 	styleUrls: ["./about.component.scss"],
 })
 export class AboutComponent implements OnInit {
-	@ViewChild("mainGrid") mainGrid: ElementRef;
+	@ViewChild(NgxMasonryComponent, { static: false })
+	masonry: NgxMasonryComponent;
+
 	constructor() {}
 
 	ngOnInit() {}
 
 	ngAfterViewChecked() {
-		$(".grid").masonry({
-			itemSelector: ".grid-item",
-			horizontalOrder: true,
-		});
+		this.masonry.layout();
 	}
 }

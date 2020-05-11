@@ -5,9 +5,13 @@
     </div>
   </div>
 
-  <div #mainGrid class="row grid">
+  <ngx-masonry
+    [options]="{ itemSelector: '.masonry-item', horizontalOrder: true }"
+    class="row"
+  >
+    <!-- <div #mainGrid class="row grid"> -->
     <app-expanding-card
-      class="grid-item col-md-6 col-lg-4"
+      class="masonry-item col-md-6 col-lg-4"
       cardTitle="technologie"
     >
       <ul class="card-text">
@@ -25,7 +29,7 @@
     </app-expanding-card>
 
     <app-expanding-card
-      class="grid-item col-md-6 col-lg-4"
+      class="masonry-item col-md-6 col-lg-4"
       cardTitle="programy graficzne"
     >
       <ul class="card-text">
@@ -39,7 +43,7 @@
     </app-expanding-card>
 
     <app-expanding-card
-      class="grid-item col-md-6 col-lg-4"
+      class="masonry-item col-md-6 col-lg-4"
       cardTitle="języki obce"
     >
       <ul class="card-text">
@@ -49,7 +53,7 @@
     </app-expanding-card>
 
     <app-expanding-card
-      class="grid-item col-md-6 col-lg-4"
+      class="masonry-item col-md-6 col-lg-4"
       cardTitle="doświadczenie"
     >
       <p class="card-text">
@@ -68,7 +72,7 @@
     </app-expanding-card>
 
     <app-expanding-card
-      class="grid-item col-md-6 col-lg-4"
+      class="masonry-item col-md-6 col-lg-4"
       cardTitle="wykształcenie"
     >
       <p class="card-text">
@@ -86,7 +90,7 @@
     </app-expanding-card>
 
     <app-expanding-card
-      class="grid-item col-md-6 col-lg-4"
+      class="masonry-item col-md-6 col-lg-4"
       cardTitle="programowanie"
     >
       <p class="card-text">
@@ -100,7 +104,7 @@
     </app-expanding-card>
 
     <app-expanding-card
-      class="grid-item col-md-6 col-lg-4"
+      class="masonry-item col-md-6 col-lg-4"
       cardTitle="dydaktyka"
     >
       <p class="card-text">
@@ -113,7 +117,7 @@
     </app-expanding-card>
 
     <app-expanding-card
-      class="grid-item col-md-6 col-lg-4"
+      class="masonry-item col-md-6 col-lg-4"
       cardTitle="grafika i projektowanie"
     >
       <p class="card-text">
@@ -128,7 +132,7 @@
     </app-expanding-card>
 
     <app-expanding-card
-      class="grid-item col-md-6 col-lg-4"
+      class="masonry-item col-md-6 col-lg-4"
       cardTitle="pozostałe umiejętności"
     >
       <p class="card-text">
@@ -142,5 +146,6 @@
         niemiecki.
       </p>
     </app-expanding-card>
-  </div>
+    <!-- </div> -->
+  </ngx-masonry>
 </section>

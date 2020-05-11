@@ -43,9 +43,10 @@ a:hover {
 
 .card {
 	height: 100%;
-	border: 5px #042140 solid;
+	border: 5px $backColour solid;
 	border-radius: 20px;
 	margin-top: 10px;
+	cursor: pointer;
 }
 .card:hover {
 	border-color: $themeColour1;

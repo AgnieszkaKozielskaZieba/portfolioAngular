@@ -1,5 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgxMasonryModule } from "ngx-masonry";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -28,7 +30,12 @@ import { ExpandingCardComponent } from "./shared/expanding-card/expanding-card.c
     TitleComponent,
     ExpandingCardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    NgxMasonryModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

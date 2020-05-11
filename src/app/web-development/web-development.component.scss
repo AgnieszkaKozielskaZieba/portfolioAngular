@@ -1,0 +1,20 @@
+@import "../shared/shared";
+.card-img-top {
+	border-radius: 15px 15px 0px 0px;
+}
+.card:hover {
+	background-color: $themeColour1;
+}
+
+.card-img-top {
+	height: 15rem;
+	object-fit: cover;
+}
+
+.col-lg-4 {
+	margin-top: 10px;
+}
+
+.card {
+	margin-top: 0px;
+}
