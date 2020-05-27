@@ -2,3 +2,26 @@
 nav {
 	background-color: $themeColour1;
 }
+
+.dropdown-menu {
+	background-color: $themeColour1;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.dropdown-item:hover {
+	background-color: $themeColour1;
+}
+
+#togglerBtn {
+	line-height: 30px;
+}
+
+@media (max-width: 575.98px) {
+	.navbar-brand,
+	.navbar-nav,
+	.dropdown-item {
+		font-size: 0.9rem;
+	}
+}

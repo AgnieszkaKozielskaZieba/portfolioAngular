@@ -54,3 +54,23 @@ a:hover {
 		background-color: $themeColour1;
 	}
 }
+
+.card-img-top {
+	border-radius: 15px 15px 0px 0px;
+	height: 15rem;
+	object-fit: cover;
+}
+
+.hidden {
+	display: none;
+}
+
+a {
+	cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+	h1 {
+		font-size: 27px;
+	}
+}

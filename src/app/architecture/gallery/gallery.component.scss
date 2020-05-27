@@ -1,0 +1,48 @@
+@import "../../shared/shared";
+
+.gallery {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loading {
+	z-index: 3;
+	color: white;
+}
+
+img {
+	z-index: 1035;
+	position: absolute;
+	transition: transform 0.5s;
+}
+
+.current {
+	transform: translateX(0);
+}
+.prev {
+	transform: translateX(-150vw);
+}
+.next {
+	transform: translateX(150vw);
+}
+
+img:not(.current):not(.prev):not(.next) {
+	display: none;
+}
+
+.navigationArea {
+	color: $themeColour1;
+	font-size: 50px;
+	z-index: 1040;
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 30px;
+}
+
+i {
+	cursor: pointer;
+}

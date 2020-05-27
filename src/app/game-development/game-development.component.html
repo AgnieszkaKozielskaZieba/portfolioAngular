@@ -1,143 +1,22 @@
-<section class="jumbotron backgroundCol2 unity">
+<section class="container" id="gamedev">
   <div class="row">
     <div class="col-lg-12 mb-3">
-      <h1 class="centerText rounded backgroundCol1 py-1">UNITY + C#</h1>
+      <h1 class="mainTitles">UNITY + C#</h1>
     </div>
-    <div class="col-lg-4">
-      <a href="#" data-toggle="modal" data-target="#Tilevania">
-        <div class="card">
-          <img alt="" src="imgs/Unity/Tilevania.png" class="card-img-top" />
-          <div class="card-body d-flex align-items-start flex-column">
-            <h5 class="card-title">Tilevania</h5>
-          </div>
-        </div>
-      </a>
-      <!-- Modal -->
-      <div
-        class="modal fade game"
-        id="Tilevania"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="TilevaniaModalTitle"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-dialog-centered modal-xl"
-          role="document"
-        >
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="TilevaniaModalTitle">TileVania</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <iframe
-                src="https://c.simmer.io/static/unityFrame/index.html?url=https%3A%2F%2Fsimmercdn.com%2Funity%2FHqNHB4guywcX0FgTRpI9TPXrxkQ2%2Fcontent%2Fc05b469f-31bc-354c-f602-46ba40d34976&imagePath=screens/4.png"
-                class="gameSize"
-              ></iframe>
-            </div>
-          </div>
+
+    <div class="col-lg-4" *ngFor="let el of data; index as i">
+      <div class="card" (click)="el.hidden = false">
+        <img alt="" src="{{ el.img }}" class="card-img-top" />
+        <div class="card-body d-flex align-items-start flex-column">
+          <h5 class="card-title">{{ el.title }}</h5>
         </div>
       </div>
-    </div>
-    <div class="col-lg-4">
-      <a href="#" data-toggle="modal" data-target="#GlitchGarden">
-        <div class="card">
-          <img alt="" src="imgs/Unity/GlitchGarden.png" class="card-img-top" />
-          <div class="card-body d-flex align-items-start flex-column">
-            <h5 class="card-title">Glitch Garden</h5>
-          </div>
-        </div>
-      </a>
-      <!-- Modal -->
-      <div
-        class="modal fade game"
-        id="GlitchGarden"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="GlitchGardenModalTitle"
-        aria-hidden="true"
+      <app-modal-window
+        [ngClass]="{ 'hidden': el.hidden }"
+        (hide)="onHideModal(i)"
       >
-        <div
-          class="modal-dialog modal-dialog-centered modal-xl"
-          role="document"
-        >
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="GlitchGardenModalTitle">
-                Glitch Garden
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <iframe
-                src="https://c.simmer.io/static/unityFrame/index.html?url=https%3A%2F%2Fsimmercdn.com%2Funity%2FHqNHB4guywcX0FgTRpI9TPXrxkQ2%2Fcontent%2F644787fe-95d8-ece9-f054-83da14d547cd&imagePath=screens/0.png"
-                class="gameSize"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <a href="#" data-toggle="modal" data-target="#ZombieRunner">
-        <div class="card">
-          <img alt="" src="imgs/Unity/ZombieRunner.png" class="card-img-top" />
-          <div class="card-body d-flex align-items-start flex-column">
-            <h5 class="card-title">Zombie Runner</h5>
-          </div>
-        </div>
-      </a>
-      <!-- Modal -->
-      <div
-        class="modal fade game"
-        id="ZombieRunner"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="ZombieRunnerModalTitle"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-dialog-centered modal-xl"
-          role="document"
-        >
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="ZombieRunnerModalTitle">
-                Zombie Runner
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <iframe
-                src="https://c.simmer.io/static/unityFrame/index.html?url=https%3A%2F%2Fsimmercdn.com%2Funity%2FHqNHB4guywcX0FgTRpI9TPXrxkQ2%2Fcontent%2F980dcf05-b8a6-96d7-55f8-8e85c681102b&imagePath=screens/0.png"
-                class="gameSize"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div class="game"><iframe #game [src]="el.url | safe"></iframe></div
+      ></app-modal-window>
     </div>
   </div>
 </section>

@@ -1,0 +1,19 @@
+@import "../shared";
+.modalContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1033;
+	width: 100vw;
+	height: 100vh;
+}
+
+.modalBackground {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: $backColour;
+	opacity: 0.8;
+}

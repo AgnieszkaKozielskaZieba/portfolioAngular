@@ -1,12 +1,11 @@
-<section class="jumbotron backgroundCol2 archicad">
+<section class="container" id="archicaddev">
   <div class="row">
     <div class="col-lg-12 mb-3">
-      <h1 class="centerText rounded backgroundCol1 py-1">
-        ARCHICAD I PROGRAMOWANIE GDL
-      </h1>
+      <h1 class="mainTitles">ARCHICAD I PROGRAMOWANIE GDL</h1>
     </div>
+
     <div class="col-lg-12 mt-0 mb-3">
-      <div class="myBorder">
+      <div class="disclaimerBorder">
         Z uwagi na obowiązujące mnie umowy nie mogę pokazać obiektów i bibliotek
         dla Archicada, które stworzyłam.<br />
         Zamieszczam więc opis funkcjonalności, które znalazły się w moich
@@ -14,318 +13,286 @@
       </div>
     </div>
   </div>
-  <!-- <div class="col-lg-12"> -->
-  <div class="row grid">
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">GNIAZDKA ELEKTRYCZNE</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>Wczytywanie bazy danych producenta do obiektu</li>
-            <li>Możliwość wyboru liczby elementów w ramce</li>
-            <li>Możliwość wyboru serii, kategorii, typu elementu, koloru</li>
-            <li>
-              Filtrowanie elementów możliwych do wybrania na podstawie
-              wcześniejszych parametrów
-            </li>
-            <li>Wybór dodatkowych akcesoriów</li>
-            <li>
-              Możliwość przedstawienia widoku 2D jako symbol elektryczny lub
-              rzeczywisty widok obiektu
-            </li>
-            <li>
-              Możliwość reprezentacji modelu 3D jako fotografii lub modelu 3D
-            </li>
-            <li>
-              Zestawienie wszystkich ramek, mechanizmów i akcesoriów w całym
-              projekcie, ich liczby oraz numerów referencyjnych
-            </li>
-            <li>
-              Indywidualnie projektowany interfejs obiektu z linkami do stron
-              producenta
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">DREWNIANE ELEWACJE</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>Dopasowanie kształtu obiektu do kształtu istniejącej ściany</li>
-            <li>
-              Możliwość indywidualnej modyfikacji kształtu obiektu za pomocą
-              aktywnych hotspotów
-            </li>
-            <li>Możliwość odsunięcia obiektu od oryginalnego położenia</li>
-            <li>Możliwość wyboru przekroju desek</li>
-            <li>Możliwość wyboru koloru elewacji</li>
-            <li>
-              Możliwość włączenia desek wykończeniowych przy oknach oraz
-              narożnikach i ustawienia ich szerokości
-            </li>
-            <li>Wyświetlanie parametrów producenta</li>
-            <li>
-              Indywidualnie projektowany interfejs obiektu z linkami do stron
-              producenta
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <ngx-masonry
+    [options]="{ itemSelector: '.masonry-item', horizontalOrder: true }"
+    class="row"
+  >
+    <!-- <div #mainGrid class="row grid"> -->
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="gniazdka elektryczne"
+    >
+      <ul class="card-text">
+        <li>Wczytywanie bazy danych producenta do obiektu</li>
+        <li>Możliwość wyboru liczby elementów w ramce</li>
+        <li>Możliwość wyboru serii, kategorii, typu elementu, koloru</li>
+        <li>
+          Filtrowanie elementów możliwych do wybrania na podstawie
+          wcześniejszych parametrów
+        </li>
+        <li>Wybór dodatkowych akcesoriów</li>
+        <li>
+          Możliwość przedstawienia widoku 2D jako symbol elektryczny lub
+          rzeczywisty widok obiektu
+        </li>
+        <li>
+          Możliwość reprezentacji modelu 3D jako fotografii lub modelu 3D
+        </li>
+        <li>
+          Zestawienie wszystkich ramek, mechanizmów i akcesoriów w całym
+          projekcie, ich liczby oraz numerów referencyjnych
+        </li>
+        <li>
+          Indywidualnie projektowany interfejs obiektu z linkami do stron
+          producenta
+        </li>
+      </ul>
+    </app-expanding-card>
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="drewniane elewacje"
+    >
+      <ul class="card-text">
+        <li>Dopasowanie kształtu obiektu do kształtu istniejącej ściany</li>
+        <li>
+          Możliwość indywidualnej modyfikacji kształtu obiektu za pomocą
+          aktywnych hotspotów
+        </li>
+        <li>Możliwość odsunięcia obiektu od oryginalnego położenia</li>
+        <li>Możliwość wyboru przekroju desek</li>
+        <li>Możliwość wyboru koloru elewacji</li>
+        <li>
+          Możliwość włączenia desek wykończeniowych przy oknach oraz narożnikach
+          i ustawienia ich szerokości
+        </li>
+        <li>Wyświetlanie parametrów producenta</li>
+        <li>
+          Indywidualnie projektowany interfejs obiektu z linkami do stron
+          producenta
+        </li>
+      </ul>
+    </app-expanding-card>
 
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">CEGLANE ELEWACJE</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>Dopasowanie kształtu obiektu do kształtu istniejącej ściany</li>
-            <li>
-              Możliwość indywidualnej modyfikacji kształtu obiektu za pomocą
-              aktywnych hotspotów
-            </li>
-            <li>Możliwość odsunięcia obiektu od oryginalnego położenia</li>
-            <li>Wybór serii i koloru płytek klinkierowych</li>
-            <li>
-              Możliwość dodania warstw zapraw i termoizolacji oraz określenia
-              ich grubości
-            </li>
-            <li>
-              Możliwość ustawienia indywidualnej reprezentacji dla każdej
-              warstwy obiektu
-            </li>
-            <li>Wyświetlanie parametrów producenta</li>
-            <li>
-              Indywidualnie projektowany interfejs obiektu z linkami do stron
-              producenta
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="ceglane elewacje"
+    >
+      <ul class="card-text">
+        <li>Dopasowanie kształtu obiektu do kształtu istniejącej ściany</li>
+        <li>
+          Możliwość indywidualnej modyfikacji kształtu obiektu za pomocą
+          aktywnych hotspotów
+        </li>
+        <li>Możliwość odsunięcia obiektu od oryginalnego położenia</li>
+        <li>Wybór serii i koloru płytek klinkierowych</li>
+        <li>
+          Możliwość dodania warstw zapraw i termoizolacji oraz określenia ich
+          grubości
+        </li>
+        <li>
+          Możliwość ustawienia indywidualnej reprezentacji dla każdej warstwy
+          obiektu
+        </li>
+        <li>Wyświetlanie parametrów producenta</li>
+        <li>
+          Indywidualnie projektowany interfejs obiektu z linkami do stron
+          producenta
+        </li>
+      </ul>
+    </app-expanding-card>
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="oświetlenie"
+    >
+      <ul class="card-text">
+        <li>Możliwość zdefiniowania obrotu lampy wokół odpowiednich osi</li>
+        <li>
+          Możliwość włączenia świecenia lampy na podstawie pliku IES od
+          producenta
+        </li>
+        <li>
+          Możliwość ustawienia własnego źródła światła i określenia jego
+          wymiarów
+        </li>
+        <li>Wybór koloru świecenia</li>
+        <li>Wybór intensywności światła</li>
+        <li>Wybór gęstości światła</li>
+        <li>Wybór jakości rzucanych cieni</li>
+        <li>
+          Indywidualnie projektowany interfejs obiektu z linkami do stron
+          producenta
+        </li>
+      </ul>
+    </app-expanding-card>
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="systemy elewacyjne typu sandwich"
+    >
+      <ul class="card-text">
+        <li>
+          Dopasowanie kształtu obiektu do kształtu istniejącej ściany lub dachu
+        </li>
+        <li>Wybór wielkości panelu</li>
+        <li>Możliwość rozkładania paneli pionowo lub poziomo</li>
+        <li>Możliwość odsunięcia obiektu od oryginalnego położenia</li>
+        <li>Wybór rodzaju profilu wewnętrznego i zewnętrznego</li>
+        <li>Wybór koloru wewnętrznego i zewnętrznego</li>
+        <li>Wybór typu łączenia płyt w narożnikach</li>
+        <li>
+          Możliwość ustawienia początku rozkładu płyt za pomocą aktywnego
+          hotspotu
+        </li>
+        <li>Zestawienie wszystkich płyt, ich wymiarów i kolorów</li>
+        <li>Wyświetlanie parametrów producenta</li>
+        <li>
+          Indywidualnie projektowany interfejs obiektu z linkami do stron
+          producenta
+        </li>
+      </ul>
+    </app-expanding-card>
 
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">OŚWIETLENIE</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>Możliwość zdefiniowania obrotu lampy wokół odpowiednich osi</li>
-            <li>
-              Możliwość włączenia świecenia lampy na podstawie pliku IES od
-              producenta
-            </li>
-            <li>
-              Możliwość ustawienia własnego źródła światła i określenia jego
-              wymiarów
-            </li>
-            <li>Wybór koloru świecenia</li>
-            <li>Wybór intensywności światła</li>
-            <li>Wybór gęstości światła</li>
-            <li>Wybór jakości rzucanych cieni</li>
-            <li>
-              Indywidualnie projektowany interfejs obiektu z linkami do stron
-              producenta
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">SYSTEMY ELEWACYJNE TYPU SANDWICH</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>
-              Dopasowanie kształtu obiektu do kształtu istniejącej ściany lub
-              dachu
-            </li>
-            <li>Wybór wielkości panelu</li>
-            <li>Możliwość rozkładania paneli pionowo lub poziomo</li>
-            <li>Możliwość odsunięcia obiektu od oryginalnego położenia</li>
-            <li>Wybór rodzaju profilu wewnętrznego i zewnętrznego</li>
-            <li>Wybór koloru wewnętrznego i zewnętrznego</li>
-            <li>Wybór typu łączenia płyt w narożnikach</li>
-            <li>
-              Możliwość ustawienia początku rozkładu płyt za pomocą aktywnego
-              hotspotu
-            </li>
-            <li>Zestawienie wszystkich płyt, ich wymiarów i kolorów</li>
-            <li>Wyświetlanie parametrów producenta</li>
-            <li>
-              Indywidualnie projektowany interfejs obiektu z linkami do stron
-              producenta
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">GRZEJNIKI</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>Wybór typu grzejnika</li>
-            <li>
-              Wybór z dostępnych wymiarów z poziomu interfejsu lub za pomocą
-              aktywnych hotspotów
-            </li>
-            <li>Kalkulacja mocy na podstawie wybranych parametrów</li>
-            <li>Wybór koloru z palety RAL</li>
-            <li>Podłączenia MEP</li>
-            <li>Możliwość wyboru ciepłej/zimnej wody w każdym punkcie MEP</li>
-            <li>Możliwość wyboru szerokości podłączenia każdego punktu MEP</li>
-            <li>
-              Indywidualnie projektowany interfejs obiektu z linkami do stron
-              producenta
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">MEBLE</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>Wybór koloru z katalogu producenta</li>
-            <li>Wybór koloru z palety RAL</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">BRAMY PRZESUWNE</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>
-              Wybór wielkości bramy z poziomu interfejsu lub za pomocą aktywnych
-              hotspotów
-            </li>
-            <li>Wybór klasy ogniowej</li>
-            <li>Wybór koloru bramy</li>
-            <li>Wybór sposobu montażu przy suficie i przy ścianie</li>
-            <li>Wybór typu balastu oraz napędu</li>
-            <li>
-              Możliwość wstawienia dodatkowych drzwi do bramy oraz określenia
-              ich wymiarów
-            </li>
-            <li>Reprezentacja na zestawieniu stolarki drzwiowej</li>
-            <li>
-              Indywidualnie projektowany interfejs obiektu z linkami do stron
-              producenta
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">TERMOIZOLACJA</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>
-              Dopasowanie kształtu obiektu do kształtu istniejącej ściany, dachu
-              lub stropu
-            </li>
-            <li>Wybór wielkości panelu</li>
-            <li>Możliwość odsunięcia obiektu od oryginalnego położenia</li>
-            <li>
-              Możliwość ustawienia początku rozkładu płyt oraz ich kierunku za
-              pomocą aktywnych hotspotów
-            </li>
-            <li>Wyświetlanie parametrów producenta</li>
-            <li>
-              Indywidualnie projektowany interfejs obiektu z linkami do stron
-              producenta
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">PŁYTKI CERAMICZNE</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>
-              Dopasowanie kształtu obiektu do kształtu istniejącego
-              pomieszczenia
-            </li>
-            <li>
-              Możliwość indywidualnej modyfikacji kształtu obiektu za pomocą
-              aktywnych hotspotów
-            </li>
-            <li>Wczytywanie danych obiektu z bazy danych producenta</li>
-            <li>Możliwość wyboru serii płytek, ich koloru i wielkości</li>
-            <li>
-              Filtrowanie elementów możliwych do wybrania na podstawie
-              wcześniejszych parametrów
-            </li>
-            <li>
-              Możliwość ustawienia początku rozkładu płytek oraz ich kierunku za
-              pomocą aktywnych hotspotów
-            </li>
-            <li>
-              Możliwość reprezentacji obiektu za pomocą tekstury lub wzoru
-              wektorowego
-            </li>
-            <li>Wyświetlanie parametrów producenta</li>
-            <li>
-              Indywidualnie projektowany interfejs obiektu z linkami do stron
-              producenta
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">OKNA DACHOWE</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>Wybór wielkości okna</li>
-            <li>Wstawianie dodatkowych akcesoriów</li>
-            <li>Możliwość ustawienia kolorów piór dla poszczególnych części</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-item col-md-6 col-lg-4">
-      <div class="card mb-3 textCard short">
-        <div class="card-header">BLATY KUCHENNE</div>
-        <div class="card-body">
-          <ul class="card-text px-2">
-            <li>Możliwość wyboru serii wykończenia oraz koloru</li>
-            <li>
-              Możliwość wyboru typu blatu - jedno, dwu, trzy lub czterobocznego
-            </li>
-            <li>
-              Możliwość modyfikacji długości i szerokości każdego fragmentu
-              blatu
-            </li>
-            <li>
-              Możliwość dodania otworów na zlew, płytę kuchennę itp. oraz
-              zdefiniowania ich kształtu, wymiarów i położenia
-            </li>
-            <li>Wyświetlanie parametrów producenta</li>
-            <li>
-              Indywidualnie projektowany interfejs obiektu z linkami do stron
-              producenta
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="grzejniki"
+    >
+      <ul class="card-text">
+        <li>Wybór typu grzejnika</li>
+        <li>
+          Wybór z dostępnych wymiarów z poziomu interfejsu lub za pomocą
+          aktywnych hotspotów
+        </li>
+        <li>Kalkulacja mocy na podstawie wybranych parametrów</li>
+        <li>Wybór koloru z palety RAL</li>
+        <li>Podłączenia MEP</li>
+        <li>Możliwość wyboru ciepłej/zimnej wody w każdym punkcie MEP</li>
+        <li>Możliwość wyboru szerokości podłączenia każdego punktu MEP</li>
+        <li>
+          Indywidualnie projektowany interfejs obiektu z linkami do stron
+          producenta
+        </li>
+      </ul>
+    </app-expanding-card>
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="meble"
+    >
+      <ul class="card-text">
+        <li>Wybór koloru z katalogu producenta</li>
+        <li>Wybór koloru z palety RAL</li>
+      </ul>
+    </app-expanding-card>
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="bramy przesuwne"
+    >
+      <ul class="card-text">
+        <li>
+          Wybór wielkości bramy z poziomu interfejsu lub za pomocą aktywnych
+          hotspotów
+        </li>
+        <li>Wybór klasy ogniowej</li>
+        <li>Wybór koloru bramy</li>
+        <li>Wybór sposobu montażu przy suficie i przy ścianie</li>
+        <li>Wybór typu balastu oraz napędu</li>
+        <li>
+          Możliwość wstawienia dodatkowych drzwi do bramy oraz określenia ich
+          wymiarów
+        </li>
+        <li>Reprezentacja na zestawieniu stolarki drzwiowej</li>
+        <li>
+          Indywidualnie projektowany interfejs obiektu z linkami do stron
+          producenta
+        </li>
+      </ul>
+    </app-expanding-card>
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="termoizolacja"
+    >
+      <ul class="card-text">
+        <li>
+          Dopasowanie kształtu obiektu do kształtu istniejącej ściany, dachu lub
+          stropu
+        </li>
+        <li>Wybór wielkości panelu</li>
+        <li>Możliwość odsunięcia obiektu od oryginalnego położenia</li>
+        <li>
+          Możliwość ustawienia początku rozkładu płyt oraz ich kierunku za
+          pomocą aktywnych hotspotów
+        </li>
+        <li>Wyświetlanie parametrów producenta</li>
+        <li>
+          Indywidualnie projektowany interfejs obiektu z linkami do stron
+          producenta
+        </li>
+      </ul>
+    </app-expanding-card>
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="płytki ceramiczne"
+    >
+      <ul class="card-text">
+        <li>
+          Dopasowanie kształtu obiektu do kształtu istniejącego pomieszczenia
+        </li>
+        <li>
+          Możliwość indywidualnej modyfikacji kształtu obiektu za pomocą
+          aktywnych hotspotów
+        </li>
+        <li>Wczytywanie danych obiektu z bazy danych producenta</li>
+        <li>Możliwość wyboru serii płytek, ich koloru i wielkości</li>
+        <li>
+          Filtrowanie elementów możliwych do wybrania na podstawie
+          wcześniejszych parametrów
+        </li>
+        <li>
+          Możliwość ustawienia początku rozkładu płytek oraz ich kierunku za
+          pomocą aktywnych hotspotów
+        </li>
+        <li>
+          Możliwość reprezentacji obiektu za pomocą tekstury lub wzoru
+          wektorowego
+        </li>
+        <li>Wyświetlanie parametrów producenta</li>
+        <li>
+          Indywidualnie projektowany interfejs obiektu z linkami do stron
+          producenta
+        </li>
+      </ul>
+    </app-expanding-card>
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="okna dachowe"
+    >
+      <ul class="card-text">
+        <li>Wybór wielkości okna</li>
+        <li>Wstawianie dodatkowych akcesoriów</li>
+        <li>Możliwość ustawienia kolorów piór dla poszczególnych części</li>
+      </ul>
+    </app-expanding-card>
+    <app-expanding-card
+      class="masonry-item col-md-6 col-lg-4"
+      cardTitle="blaty kuchenne"
+    >
+      <ul class="card-text">
+        <li>Możliwość wyboru serii wykończenia oraz koloru</li>
+        <li>
+          Możliwość wyboru typu blatu - jedno, dwu, trzy lub czterobocznego
+        </li>
+        <li>
+          Możliwość modyfikacji długości i szerokości każdego fragmentu blatu
+        </li>
+        <li>
+          Możliwość dodania otworów na zlew, płytę kuchennę itp. oraz
+          zdefiniowania ich kształtu, wymiarów i położenia
+        </li>
+        <li>Wyświetlanie parametrów producenta</li>
+        <li>
+          Indywidualnie projektowany interfejs obiektu z linkami do stron
+          producenta
+        </li>
+      </ul>
+    </app-expanding-card>
+  </ngx-masonry>
 </section>

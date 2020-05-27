@@ -1,0 +1,15 @@
+<div class="gallery">
+	<div class="loading" *ngIf="!galleryLoaded">Loading...</div>
+	<div *ngIf="galleryLoaded" class="navigationArea">
+		<i class="fas fa-angle-left" (click)="onPrevImage()"></i>
+		<i class="fas fa-angle-right" (click)="onNextImage()"></i>
+	</div>
+	<img
+		*ngFor="let img of sources"
+		#image
+		src="{{ img }}"
+		alt=""
+		(load)="onImageLoaded()"
+		class="hidden"
+	/>
+</div>

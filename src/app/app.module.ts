@@ -15,6 +15,9 @@ import { ArchitectureComponent } from "./architecture/architecture.component";
 import { CardComponent } from "./shared/card/card.component";
 import { TitleComponent } from "./shared/title/title.component";
 import { ExpandingCardComponent } from "./shared/expanding-card/expanding-card.component";
+import { SafePipe } from "./shared/safe.pipe";
+import { ModalWindowComponent } from "./shared/modal-window/modal-window.component";
+import { GalleryComponent } from "./architecture/gallery/gallery.component";
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { ExpandingCardComponent } from "./shared/expanding-card/expanding-card.c
     CardComponent,
     TitleComponent,
     ExpandingCardComponent,
+    SafePipe,
+    ModalWindowComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
